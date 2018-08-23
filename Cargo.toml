@@ -1,0 +1,35 @@
+[[bin]]
+name = "protochain"
+path = "src/main.rs"
+
+[package]
+name = "protochain"
+version = "0.1.0"
+authors = ["Akagi201 <akagi201@gmail.com>"]
+
+[dependencies]
+error-chain = "0.12"
+protochain-cli = { path = "cli" }
+futures = "0.1"
+ctrlc = { git = "https://github.com/paritytech/rust-ctrlc.git" }
+
+[workspace]
+members = [
+  "cli",
+  "executor",
+  "primitives",
+  "runtime",
+]
+exclude = [
+	"runtime/wasm",
+]
+
+[badges]
+travis-ci = { repository = "Akagi201/protochain", branch = "master" }
+maintenance = { status = "actively-developed" }
+is-it-maintained-issue-resolution = { repository = "Akagi201/protochain" }
+is-it-maintained-open-issues = { repository = "Akagi201/protochain" }
+
+[profile.release]
+# Substrate runtime requires unwinding.
+panic = "unwind"

@@ -1,0 +1,8 @@
+/Users/akagi201/Documents/src/github.com/paritytech/substrate/demo/runtime/wasm/target/wasm32-unknown-unknown/release/deps/libsubstrate_runtime_primitives-6cd82539482df1b6.rlib: /Users/akagi201/Documents/src/github.com/paritytech/substrate/substrate/runtime/primitives/src/lib.rs /Users/akagi201/Documents/src/github.com/paritytech/substrate/substrate/runtime/primitives/src/traits.rs /Users/akagi201/Documents/src/github.com/paritytech/substrate/substrate/runtime/primitives/src/generic.rs /Users/akagi201/Documents/src/github.com/paritytech/substrate/substrate/runtime/primitives/src/bft.rs
+
+/Users/akagi201/Documents/src/github.com/paritytech/substrate/demo/runtime/wasm/target/wasm32-unknown-unknown/release/deps/substrate_runtime_primitives-6cd82539482df1b6.d: /Users/akagi201/Documents/src/github.com/paritytech/substrate/substrate/runtime/primitives/src/lib.rs /Users/akagi201/Documents/src/github.com/paritytech/substrate/substrate/runtime/primitives/src/traits.rs /Users/akagi201/Documents/src/github.com/paritytech/substrate/substrate/runtime/primitives/src/generic.rs /Users/akagi201/Documents/src/github.com/paritytech/substrate/substrate/runtime/primitives/src/bft.rs
+
+/Users/akagi201/Documents/src/github.com/paritytech/substrate/substrate/runtime/primitives/src/lib.rs:
+/Users/akagi201/Documents/src/github.com/paritytech/substrate/substrate/runtime/primitives/src/traits.rs:
+/Users/akagi201/Documents/src/github.com/paritytech/substrate/substrate/runtime/primitives/src/generic.rs:
+/Users/akagi201/Documents/src/github.com/paritytech/substrate/substrate/runtime/primitives/src/bft.rs:

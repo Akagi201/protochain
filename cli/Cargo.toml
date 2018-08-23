@@ -1,0 +1,29 @@
+[package]
+name = "protochain-cli"
+version = "0.1.0"
+authors = ["Parity Technologies <admin@parity.io>"]
+description = "Substrate protochain node implementation in Rust."
+
+[dependencies]
+clap = { version = "2.27", features = ["yaml"] }
+ctrlc = { git = "https://github.com/paritytech/rust-ctrlc.git" }
+ed25519 = { git = "https://github.com/paritytech/substrate" }
+env_logger = "0.4"
+futures = "0.1.17"
+error-chain = "0.12"
+hex-literal = "0.1"
+log = "0.3"
+tokio = "0.1.7"
+triehash = "0.1"
+substrate-client = { git = "https://github.com/paritytech/substrate" }
+substrate-codec = { git = "https://github.com/paritytech/substrate" }
+substrate-extrinsic-pool = { git = "https://github.com/paritytech/substrate" }
+substrate-runtime-io = { git = "https://github.com/paritytech/substrate" }
+substrate-state-machine = { git = "https://github.com/paritytech/substrate" }
+substrate-executor = { git = "https://github.com/paritytech/substrate" }
+substrate-primitives = { git = "https://github.com/paritytech/substrate" }
+substrate-rpc-servers = { git = "https://github.com/paritytech/substrate" }
+substrate-rpc = { git = "https://github.com/paritytech/substrate" }
+protochain-primitives = { path = "../primitives" }
+protochain-executor = { path = "../executor" }
+protochain-runtime = { path = "../runtime" }
