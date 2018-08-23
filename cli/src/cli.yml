@@ -10,3 +10,17 @@ args:
 subcommands:
   - validator:
       about: Run validator node
+  - multi:
+      about: Run multi node
+      args:
+        - bootnodes:
+            long: bootnodes
+            value_name: URL
+            help: Specify a list of bootnodes
+            takes_value: true
+            multiple: true
+        - port:
+            long: port
+            value_name: PORT
+            help: Specify p2p protocol TCP port
+            takes_value: true

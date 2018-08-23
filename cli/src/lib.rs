@@ -237,6 +237,29 @@ pub fn run<I, T>(args: I) -> error::Result<()> where
 
 		runtime.block_on(exit.into_future()).expect("Error running informant event loop");
 		return Ok(())
+	} else if let Some(matches) = matches.subcommand_matches("multi") {
+		info!("Starting multi node.");
+		let (exit_send, exit) = futures::sync::mpsc::channel(1);
+		ctrlc::CtrlC::set_handler(move || {
+			exit_send.clone().send(()).wait().expect("Error sending exit notification");
+		});
+
+		// get bootnodes from cli
+		let bootnodes = matches.values_of("bootnodes")
+													 .map_or(Default::default(), |v| v.map(|n| n.to_owned()).collect::<Vec<_>>());
+
+		info!("bootnodes: {:?}", bootnodes);
+
+		// get port from cli
+		let port = match matches.value_of("port") {
+			Some(port) => port.parse().map_err(|_| "Invalid p2p port value specified.")?,
+			None => 30333,
+		};
+
+		info!("port: {:?}", port);
+
+		runtime.block_on(exit.into_future()).expect("Error running informant event loop");
+		return Ok(())
 	}
 
 	println!("No command given.\n");
