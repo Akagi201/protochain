@@ -19,6 +19,8 @@ pub enum Alternative {
 	Development,
 	/// Whatever the current runtime is, with simple Alice/Bob auths.
 	LocalTestnet,
+	/// Whatever the current runtime is with the "global testnet" defaults.
+	StagingTestnet,
 }
 
 impl Alternative {
@@ -104,6 +106,12 @@ impl Alternative {
 				None,
 				None,
 			),
+			Alternative::StagingTestnet => {
+				match ChainSpec::from_json_file(std::path::PathBuf::from("protochain_testnet.json")) {
+					Ok(spec) => spec,
+					Err(_) => panic!(),
+				}
+			}
 		})
 	}
 
@@ -111,6 +119,7 @@ impl Alternative {
 		match s {
 			"dev" => Some(Alternative::Development),
 			"local" => Some(Alternative::LocalTestnet),
+			"staging" => Some(Alternative::StagingTestnet),
 			_ => None,
 		}
 	}

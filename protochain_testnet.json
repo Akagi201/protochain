@@ -1,0 +1,20 @@
+{
+  "name": "Protochain",
+  "id": "protochain",
+  "bootNodes": [
+    "/"
+  ],
+  "telemetryUrl":  "wss://telemetry.polkadot.io/submit/",
+  "protocolId": null,
+  "consensusEngine": null,
+  "properties": {
+    "networkId": 201,
+    "tokenDecimals": 15,
+    "tokenSymbol": "PTC"
+  },
+  "genesis": {
+    "raw": {
+      "0xb553f17a95cb65012a4326bbaae97035": "0x00000000000000000000000000000000"
+    }
+  }
+}
